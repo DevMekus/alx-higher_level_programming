@@ -2,14 +2,9 @@
 import sys
 
 if __name__ == "__main__":
-    arguments = sys.argv[1:]
-    arg_len = len(arguments)
-
-    if (arg_len < 1):
-        print("0 arguments:")
+    if (len(sys.argv[1:]) < 1):
+        print(f"{len(sys.argv[1:])} arguments:")
     else:
-        print(f"{arg_len} arguments:")
-        for i in arguments:
-            print(f"{sys.argv.index(i)}: {i} ")
-            
-    
+        print(f"{len(sys.argv[1:])} arguments:")
+        for i in sys.argv[1:]:
+            print(f"{sys.argv.index(i)}: {i}")
