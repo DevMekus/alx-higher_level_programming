@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+import sys
+import math
+
 if __name__ == "__main__":
-    import sys, math
     result = 0
-    for i in sys.argv:
+    arguments =sys.argv[1:]
+    for i in arguments:
         result += int(i)
-        print("{}".format(result))
+    print("{}".format(result))
