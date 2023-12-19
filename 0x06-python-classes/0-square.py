@@ -1,6 +1,6 @@
-#!/bin/python3
-class Square :
-    """" 
-        Declaring  a class called square
-    """
-    pass;
+#!/usr/bin/python3
+"""Square Representative class"""
+
+class Square:
+    """a square class"""
+    pass
