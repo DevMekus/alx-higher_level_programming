@@ -1,0 +1,14 @@
+The ``0-add_integer.py`` module
+======================
+
+Using ``add_integer``
+-------------------
+This is a test File for the add_integer function First import
+``add_integer`` From the 0-add_integer Module:
+
+    >>> from 0-add_integer import add_integer
+
+Now use it:
+
+    >>> add_integer(6, 4)
+    10
