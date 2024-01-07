@@ -1,0 +1,103 @@
+================================
+How to Use 5-text_indentation.py
+================================
+
+text-indentation function ``text_indentation(text)``.
+
+Usage
+=====
+
+After each '.', '?', and ':' Print text with two new lines.
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("HI?")
+    HI?
+    <BLANKLINE>
+
+No spaces are printed at the beginning of a line.
+
+::
+
+    >>> text_indentation("   Hi Nnaji.")
+    Hi Nnaji.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("   ")
+
+No spaces are printed at the end of a printed line.
+
+::
+
+    >>> text_indentation("Come.   ")
+    Come.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("    Help Me.    This is hard.   ")
+    Help Me.
+    <BLANKLINE>
+    This is hard.
+    <BLANKLINE>
+
+New lines are only printed for the characters ``.``, ``?``, and ``:`` -
+
+::
+
+    >>> text_indentation("Help me, there is no period")
+    Help me, there is no period
+
+New lines within a string are printed as normal.
+
+::
+
+    >>> text_indentation(a new-line! Here goes:\nPrinted.")
+    a new-line! Here goes:
+    <BLANKLINE>
+    <BLANKLINE>
+    Printed.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("\n\n\n three new lines.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    three new lines.
+    <BLANKLINE>
+
+
+
+Invalid Text
+============
+
+``text`` must be a string. 
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"three": 3, "five": 5})
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+
