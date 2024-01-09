@@ -2,9 +2,15 @@
 """Class Definition of an inherited list class MyList """
 
 class MyList(list):
-    """Implements sorted printing for the built-in list class."""
+    """Sorted Algorithm for a buil-in list class"""
+
+    def __init__(self, *args, **argss):
+        """ Call the constructor of the base class (list)"""
+
+        super().__init__(*args, **argss)
 
     def print_sorted(self):
-        """Print a list in sorted ascending order."""
+        """Printing the List in a sorted form """
 
-        print(sorted(self))
+        sorted_list = sorted(self)
+        print(sorted_list)
