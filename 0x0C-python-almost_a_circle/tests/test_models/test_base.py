@@ -26,10 +26,10 @@ class TestBaseClass(unittest.TestCase):
   
     def test_from_json_string(self):
         # Test case when the input is a valid JSON string
-        json_str = '[{"name": "John", "age": 25},{"name": "Alice", "age": 30}]'
+        json_str = '[{"name": "Peter", "age": 30},{"name": "Bingo", "age": 35}]'
         result = Base.from_json_string(json_str)
-        expected_result = [{'name': 'John', 'age': 25},
-                           {'name': 'Alice', 'age': 30}]
+        expected_result = [{'name': 'Peter', 'age': 30},
+                           {'name': 'Bingo', 'age': 35}]
         self.assertEqual(result, expected_result)
 
         # Test case when the input is an empty JSON string
