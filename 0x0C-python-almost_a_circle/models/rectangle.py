@@ -130,20 +130,18 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Prints the Area of a Rectangle with a #"""
+        """Print the Rectangle using the `#` character."""
 
-        if self.__width and self.__height and self.__x and self.__y == 0:
-            print(end="")
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
 
-        for i in range(self.__y):
-            print()
+        [print("") for y_cord in range(self.y)]
+        for h_cord in range(self.height):
+            [print(" ", end="") for x_cord in range(self.x)]
+            [print("#", end="") for w_cord in range(self.width)]
+            print("")
 
-        for j in range(self.__height):
-            for k in range(self.__width):
-                for l in range(self.__x):
-                    print(" ", end="")
-                print("#", end="")
-            print()
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
@@ -151,23 +149,50 @@ class Rectangle(Base):
                 
 
     def update(self, *args, **kwargs):
-        """ Updating attributes methods
+        """Update the Rectangle Model.
 
         Args:
-            args(int): The integer arguments to update attribute with
-
+            *args (ints): New attribute values.
+                - First argument is id attribute
+                - Second argument is width attribute
+                - Third argument is height attribute
+                - Fourth argument is x attribute
+                - Fifth argument is y attribute
+            **kwargs (dict): New key/value pairs of attributes.
         """
-        if args:
-            attributes = ['id', 'width', 'height', 'x', 'y']
+        if args and len(args) != 0:
+            start = 0
+            for arg in args:
+                if start == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif start == 1:
+                    self.width = arg
+                elif start == 2:
+                    self.height = arg
+                elif start == 3:
+                    self.x = arg
+                elif start == 4:
+                    self.y = arg
+                start += 1
 
-            for attribute, value in zip(attributes, args):
-                if hasattr(self, attribute):
-                    setattr(self, attribute, value)
-
-        else:
-            for key, value in kwargs.items():
-                if hasattr(self, key):
-                    setattr(self, key, value)
+        elif kwargs and len(kwargs) != 0:
+            for o, p in kwargs.items():
+                if o == "id":
+                    if p is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = p
+                elif o == "width":
+                    self.width = p
+                elif o == "height":
+                    self.height = p
+                elif o == "x":
+                    self.x = p
+                elif o == "y":
+                    self.y = p
 
 
     def to_dictionary(self):

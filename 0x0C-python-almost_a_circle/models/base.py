@@ -28,23 +28,40 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Json Serialization of list_dictionaries"""
+        """
+        Returns a JSON serialized list of dicts.
 
-        if list_dictionaries == None or list_dictionaries == []:
-            return []
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        Return:
+            JSON serialized of a list of dicts
+            OR Empty if no dictionary is passed
+        """
+
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
         return json.dumps(list_dictionaries)
 
+    
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Class that saves to a file
-            Args:
-                list_objs: The list of objects to be converted to dictionary
         """
-        dic_list = [obj.to_dictionary() for obj in list_objs]
-        cls.to_json_string(dic_list)
+        Saves a serialized list of objects to a file.
 
-        with open(f'{cls.__name__}.json', 'w', encoding='utf-8') as file:
-            json.dump(dic_list, file)
+        Args:
+            list_objs (list): List of Base instances.
+        Return:
+            None
+        """
+
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as jsonfile:
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jsonfile.write(Base.to_json_string(list_dicts))
+                
 
     @staticmethod
     def from_json_string(json_string):
