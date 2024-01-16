@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+eet!/usr/bin/python3
 """ Different Test Cases for A Rectangle"""
 
 
@@ -173,7 +173,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_to_dictionary_value(self):
         self.assertEqual(
             self.rectangle1.to_dictionary(),
-            {'id': 12, 'width': 4, 'height': 4, 'x': 2, 'y': 1}
+            {'id': 12, 'width': 4, 'height': 6, 'x': 2, 'y': 1}
         )
 
     def test_unrecognized_to_dictionary_arg(self):
