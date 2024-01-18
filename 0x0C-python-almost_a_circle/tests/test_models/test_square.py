@@ -11,7 +11,7 @@ class TestSquareClass(unittest.TestCase):
     """ Test Module for the Square Class"""
 
     def setUp(self):
-        """ Setup method """
+        """ The Setup method """
         self.square = Square(1, 1)
 
     def tearDown(self) -> None:

@@ -7,7 +7,7 @@ from models.base import Base
 
 
 class TestBaseClass(unittest.TestCase):
-    """ Test base class """
+    """ Test Model for the base class """
     def setUp(self) -> None:
         self.base1 = Base()
         self.base2 = Base()

@@ -11,7 +11,7 @@ class TestRectangleClass(unittest.TestCase):
     """Several Test Cases for the Rectangle"""
 
     def setUp(self):
-        """ The setup method"""
+        """ The test setup method"""
         self.rectangle1 = Rectangle(4, 6, 2, 1, 12)
         self.rectangle2 = Rectangle(1, 1)
         self.rectangle3 = Rectangle(1, 1)
