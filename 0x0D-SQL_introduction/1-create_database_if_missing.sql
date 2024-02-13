@@ -1,1 +1,2 @@
-VimCrypt~03!ƒ'Á…Ê€,ªÎ¿n„Od¨èĞáhpûoŞ×áÇGœÁ¤r§*ùÓZñmÛó‰~ Ã?qd_Ã¶o2*¨51ï¶Ä¢È«‹Bmı;ÖPT/S©ñÍ
+-- Creates the database hbtn_0c_0.
+CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
