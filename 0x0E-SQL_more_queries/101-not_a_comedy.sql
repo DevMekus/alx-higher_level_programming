@@ -1,5 +1,4 @@
--- lists all shows without the genre Comedy in the database hbtn_0d_tvshows
--- uses a database to list all rows not linked to one row
+-- list all shows without the Comedy genre
 SELECT title
 FROM tv_shows
 WHERE title NOT IN
