@@ -3,7 +3,6 @@
 Displays the value of the X-Request-Id variable
 """
 
-
 if __name__ == "__main__":
     import sys
     import urllib.request
