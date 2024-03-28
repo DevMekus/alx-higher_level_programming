@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import urllib.request
 """Fetches https://alx-intranet.hbtn.io/status"""
+import urllib.request
 
 if __name__ == "__main__":
     request = urllib.request.Request("https://alx-intranet.hbtn.io/status")
